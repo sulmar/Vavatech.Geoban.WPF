@@ -1,0 +1,35 @@
+﻿<Window x:Class="Geoban.WPF.Demo.Binding.BindingView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Geoban.WPF.Demo.Binding"
+        mc:Ignorable="d"
+        Title="BindingView" Height="300" Width="300">
+
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="5" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+
+        <StackPanel>
+            <TextBox Name="FirstName" Text="Marcin" />
+            <TextBox Text="Sulecki" />
+            <TextBox Text="{Binding ElementName=AgeSlider, Path=Value}" />
+
+            <Slider
+                Name="AgeSlider"
+                Value="30" Minimum="0" Maximum="120"
+                IsSnapToTickEnabled="{Binding ElementName=IsTickEnabled, Path=IsChecked}"
+                />
+
+            <CheckBox Name="IsTickEnabled" IsChecked="False" />
+
+
+            <Button Click="Button_Click">Save</Button>
+        </StackPanel>
+        
+    </Grid>
+</Window>

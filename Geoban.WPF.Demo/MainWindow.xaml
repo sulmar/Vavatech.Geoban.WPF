@@ -6,7 +6,38 @@
         xmlns:local="clr-namespace:Geoban.WPF.Demo"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+    <StackPanel>
+        <Label Content="Firstname" />
+        <Button Content="Save" 
+                Background="#FF65A265"
+                Foreground="White"
+                />
+        <Button>
+            
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Default" />
+                <CheckBox />
+                <TextBlock Text="Default" />
+                <Button>Send</Button>
+            </StackPanel>
+        </Button>
+
+        <Button>
+            <Button.Content>
+                Hello
+            </Button.Content>
+        </Button>
+
+        <Button Content="Call"
+                Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="Red" />
+                    <GradientStop Color="Black" Offset="0.5" />
+                </LinearGradientBrush>  
+            </Button.Background>
+            
+        </Button>
+
+    </StackPanel>
 </Window>

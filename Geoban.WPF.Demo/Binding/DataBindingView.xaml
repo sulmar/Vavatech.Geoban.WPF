@@ -1,0 +1,48 @@
+﻿<Window x:Class="Geoban.WPF.Demo.Binding.DataBindingView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Geoban.WPF.Demo.Binding"
+        xmlns:c="clr-namespace:Geoban.WPF.Demo.Converters"
+        mc:Ignorable="d"
+        Title="DataBindingView" Height="300" Width="300">
+
+    <Window.Resources>
+        <c:BrushConverter x:Key="BrushConverter" />
+    </Window.Resources>
+    
+
+    <Grid>
+        <StackPanel>
+
+            <TextBlock Text="{Binding}" Margin="20" />
+
+
+            <TextBox Text="{Binding FirstName}" />
+            <TextBox Text="{Binding LastName}" />
+            <TextBox Text="{Binding Age, UpdateSourceTrigger=PropertyChanged}" />
+
+            <StackPanel DataContext="{Binding HomeAddress}">
+                <TextBox Text="{Binding City}" />
+                <TextBox Text="{Binding Street}" />
+                <TextBox Text="{Binding Postcode}" />
+            </StackPanel>
+            
+            <StackPanel DataContext="{Binding WorkAddress}">
+                <TextBox Text="{Binding City}" />
+                <TextBox Text="{Binding Street}" />
+                <TextBox Text="{Binding Postcode}" />
+            </StackPanel>
+            <Slider
+                Value="30" 
+                Minimum="0" 
+                Maximum="120"
+                IsSnapToTickEnabled="True"
+                />
+
+            <Button Background="{Binding Age, Converter={StaticResource BrushConverter}}">Save</Button>
+
+        </StackPanel>
+    </Grid>
+</Window>
