@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geoban.WPF.Demo", "Geoban.W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geoban.Sharing.Models", "Geoban.Sharing.Models\Geoban.Sharing.Models.csproj", "{B0C873B3-7E9A-4C93-9121-847884505D58}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geoban.Sharing.Services", "Geoban.Sharing.Services\Geoban.Sharing.Services.csproj", "{526B5616-A635-4E51-B17C-5D0EFDE66DF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geoban.Sharing.MockServices", "Geoban.Sharing.MockServices\Geoban.Sharing.MockServices.csproj", "{4CF8093E-F940-446C-AC41-9AC01008A120}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geoban.Sharing.WPFClient", "Geoban.Sharing.WPFClient\Geoban.Sharing.WPFClient.csproj", "{860E8203-29BD-4F68-98B0-9D6E74C10BE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +27,18 @@ Global
 		{B0C873B3-7E9A-4C93-9121-847884505D58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0C873B3-7E9A-4C93-9121-847884505D58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0C873B3-7E9A-4C93-9121-847884505D58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{526B5616-A635-4E51-B17C-5D0EFDE66DF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{526B5616-A635-4E51-B17C-5D0EFDE66DF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{526B5616-A635-4E51-B17C-5D0EFDE66DF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{526B5616-A635-4E51-B17C-5D0EFDE66DF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CF8093E-F940-446C-AC41-9AC01008A120}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CF8093E-F940-446C-AC41-9AC01008A120}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CF8093E-F940-446C-AC41-9AC01008A120}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CF8093E-F940-446C-AC41-9AC01008A120}.Release|Any CPU.Build.0 = Release|Any CPU
+		{860E8203-29BD-4F68-98B0-9D6E74C10BE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{860E8203-29BD-4F68-98B0-9D6E74C10BE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{860E8203-29BD-4F68-98B0-9D6E74C10BE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{860E8203-29BD-4F68-98B0-9D6E74C10BE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
