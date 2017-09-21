@@ -14,6 +14,29 @@ namespace Geoban.Sharing.Models
 
         public int ProductionYear { get; set; }
 
-        public decimal Price { get; set; }
+        #region Price
+
+        private decimal _Price;
+        public decimal Price
+        {
+            get { return _Price; }
+            set
+            {
+                _Price = value;
+
+                // NET 4.0
+                OnPropertyChanged(() => Price);
+
+                // .NET 4.5
+                // OnPropertyChanged();
+
+                // C# 6.0
+               // OnPropertyChanged(nameof(Price));
+
+                // OnPropertyChanged(() => Price);
+            }
+        }
+
+        #endregion
     }
 }

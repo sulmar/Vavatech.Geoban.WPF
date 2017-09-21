@@ -10,9 +10,29 @@ namespace Geoban.Sharing.Models
     {
         public int CustomerId { get; set; }
 
-        public string FirstName { get; set; }
+        private string _FirstName;
+        public string FirstName
+        {
+            get { return _FirstName; }
+            set
+            {
+                _FirstName = value;
+                OnPropertyChanged();
+                OnPropertyChanged(() => FullName);
+            }
+        }
 
-        public string LastName { get; set; }
+        private string _LastName;
+
+        public string LastName
+        {
+            get { return _LastName; }
+            set { _LastName = value;
+                OnPropertyChanged();
+                OnPropertyChanged(() => FullName);
+            }
+        }
+
 
         public string FullName => $"{FirstName} {LastName}";
 
