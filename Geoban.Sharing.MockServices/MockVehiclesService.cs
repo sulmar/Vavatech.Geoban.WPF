@@ -44,5 +44,10 @@ namespace Geoban.Sharing.MockServices
         {
             throw new NotImplementedException();
         }
+
+        public int GetQty()
+        {
+            return vehicles.Count;
+        }
     }
 }
