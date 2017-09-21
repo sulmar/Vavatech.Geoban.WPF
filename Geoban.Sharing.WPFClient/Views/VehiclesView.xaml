@@ -10,8 +10,53 @@
     <Window.DataContext>
         <vm:VehiclesViewModel />
     </Window.DataContext>
-    
-    <Grid>
-        <DataGrid ItemsSource="{Binding Vehicles}" />
-    </Grid>
+
+    <DockPanel>
+
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom">
+            <Button Command="{Binding CalculateCommand}" CommandParameter="Hello World">Calculate</Button>
+            <Button Command="{Binding CalculateCommand}" >Calculate 2</Button>
+            <Button Command="{Binding CalculateCommand}">Calculate 3</Button>
+        </StackPanel>
+
+        
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <!-- Lista pojazdów -->
+
+            <DataGrid ItemsSource="{Binding Vehicles}"
+                  SelectedItem="{Binding SelectedVehicle}"
+                  AutoGenerateColumns="False"
+                  >
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Nazwa" Binding="{Binding Name}" />
+                    <DataGridTextColumn Header="Rok produkcji" Binding="{Binding ProductionYear}" />
+                    <DataGridTextColumn Header="Cena" Binding="{Binding Price}" />
+                </DataGrid.Columns>
+
+            </DataGrid>
+
+
+            <!-- Szczegóły wybranego pojazdu -->
+
+            <StackPanel Grid.Column="1" 
+                    DataContext="{Binding SelectedVehicle}"
+                    Margin="20"
+                    
+                    >
+                <TextBox Text="{Binding Name}" />
+                <TextBox Text="{Binding Price}" />
+            </StackPanel>
+        </Grid>
+
+        
+    </DockPanel>
+
 </Window>

@@ -16,13 +16,15 @@ using System.Windows.Shapes;
 namespace Geoban.Sharing.WPFClient.Views
 {
     /// <summary>
-    /// Interaction logic for VehiclesView.xaml
+    /// Interaction logic for CustomersView.xaml
     /// </summary>
-    public partial class VehiclesView : Window
+    public partial class CustomersView : Window
     {
-        public VehiclesView()
+        public CustomersView()
         {
             InitializeComponent();
         }
+
+      
     }
 }

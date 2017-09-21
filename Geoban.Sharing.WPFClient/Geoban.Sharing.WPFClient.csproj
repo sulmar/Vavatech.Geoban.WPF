@@ -36,6 +36,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -58,8 +59,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ObservableCollectionEx.cs" />
+    <Compile Include="ViewModels\CustomersViewModel.cs" />
     <Compile Include="ViewModels\VehiclesViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\CustomersView.xaml.cs">
+      <DependentUpon>CustomersView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\VehiclesView.xaml.cs">
       <DependentUpon>VehiclesView.xaml</DependentUpon>
     </Compile>
@@ -91,6 +97,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Geoban.Sharing.DbServices\Geoban.Sharing.DbServices.csproj">
+      <Project>{dd1af92a-6c49-4eca-a968-252529b99d68}</Project>
+      <Name>Geoban.Sharing.DbServices</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Geoban.Sharing.MockServices\Geoban.Sharing.MockServices.csproj">
       <Project>{4cf8093e-f940-446c-ac41-9ac01008a120}</Project>
       <Name>Geoban.Sharing.MockServices</Name>
@@ -103,8 +113,16 @@
       <Project>{526b5616-a635-4e51-b17c-5d0efde66df8}</Project>
       <Name>Geoban.Sharing.Services</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Geoban.WPF.Common\Geoban.WPF.Common.csproj">
+      <Project>{74b5058e-3c97-491b-a21a-b0b20daf8dd6}</Project>
+      <Name>Geoban.WPF.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\CustomersView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\VehiclesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
