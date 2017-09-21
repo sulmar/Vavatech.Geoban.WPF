@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geoban.Sharing.MockServices
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geoban.Sharing.WPFClient", "Geoban.Sharing.WPFClient\Geoban.Sharing.WPFClient.csproj", "{860E8203-29BD-4F68-98B0-9D6E74C10BE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geoban.Sharing.DbServices", "Geoban.Sharing.DbServices\Geoban.Sharing.DbServices.csproj", "{DD1AF92A-6C49-4ECA-A968-252529B99D68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geoban.WPF.Common", "Geoban.WPF.Common\Geoban.WPF.Common.csproj", "{74B5058E-3C97-491B-A21A-B0B20DAF8DD6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{860E8203-29BD-4F68-98B0-9D6E74C10BE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{860E8203-29BD-4F68-98B0-9D6E74C10BE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{860E8203-29BD-4F68-98B0-9D6E74C10BE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD1AF92A-6C49-4ECA-A968-252529B99D68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD1AF92A-6C49-4ECA-A968-252529B99D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD1AF92A-6C49-4ECA-A968-252529B99D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD1AF92A-6C49-4ECA-A968-252529B99D68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74B5058E-3C97-491B-A21A-B0B20DAF8DD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74B5058E-3C97-491B-A21A-B0B20DAF8DD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74B5058E-3C97-491B-A21A-B0B20DAF8DD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74B5058E-3C97-491B-A21A-B0B20DAF8DD6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
