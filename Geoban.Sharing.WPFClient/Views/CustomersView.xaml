@@ -32,11 +32,17 @@
             
                <DataGrid ItemsSource="{Binding Customers}"
                       SelectedItem="{Binding SelectedCustomer}"
+                       
                          local:CustomColumnHeadersProperty.ItemType="{x:Type model:Customer}"
                          
                       />
 
-            
+
+              <ListBox ItemsSource="{Binding Customers}" 
+                     ItemTemplate="{StaticResource CustomerTemplate}"
+                       />
+
+
         </DockPanel>
 
     </Grid>
