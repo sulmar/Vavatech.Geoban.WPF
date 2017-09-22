@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{860E8203-29BD-4F68-98B0-9D6E74C10BE0}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>Geoban.Sharing.WPFClient</RootNamespace>
-    <AssemblyName>Geoban.Sharing.WPFClient</AssemblyName>
+    <ProjectGuid>{D86990FE-C400-4E40-985B-ECBA6CDF337D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Geoban.WPF.Resources</RootNamespace>
+    <AssemblyName>Geoban.WPF.Resources</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -33,10 +33,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -49,27 +51,6 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-  </ItemGroup>
-  <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </ApplicationDefinition>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="CustomColumnHeadersProperty.cs" />
-    <Compile Include="ObservableCollectionEx.cs" />
-    <Compile Include="ViewModels\CustomersViewModel.cs" />
-    <Compile Include="ViewModels\VehiclesViewModel.cs" />
-    <Compile Include="ViewModels\ViewModelBase.cs" />
-    <Compile Include="Views\CustomersView.xaml.cs">
-      <DependentUpon>CustomersView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\VehiclesView.xaml.cs">
-      <DependentUpon>VehiclesView.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -95,40 +76,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Geoban.Sharing.DbServices\Geoban.Sharing.DbServices.csproj">
-      <Project>{dd1af92a-6c49-4eca-a968-252529b99d68}</Project>
-      <Name>Geoban.Sharing.DbServices</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Geoban.Sharing.MockServices\Geoban.Sharing.MockServices.csproj">
-      <Project>{4cf8093e-f940-446c-ac41-9ac01008a120}</Project>
-      <Name>Geoban.Sharing.MockServices</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Geoban.Sharing.Models\Geoban.Sharing.Models.csproj">
-      <Project>{b0c873b3-7e9a-4c93-9121-847884505d58}</Project>
-      <Name>Geoban.Sharing.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Geoban.Sharing.Services\Geoban.Sharing.Services.csproj">
-      <Project>{526b5616-a635-4e51-b17c-5d0efde66df8}</Project>
-      <Name>Geoban.Sharing.Services</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Geoban.WPF.Common\Geoban.WPF.Common.csproj">
-      <Project>{74b5058e-3c97-491b-a21a-b0b20daf8dd6}</Project>
-      <Name>Geoban.WPF.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Geoban.WPF.Resources\Geoban.WPF.Resources.csproj">
-      <Project>{d86990fe-c400-4e40-985b-ecba6cdf337d}</Project>
-      <Name>Geoban.WPF.Resources</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="Views\CustomersView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\VehiclesView.xaml">
+    <Page Include="Styles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
