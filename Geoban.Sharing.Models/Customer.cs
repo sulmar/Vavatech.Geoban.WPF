@@ -14,6 +14,7 @@ namespace Geoban.Sharing.Models
 
         private string _FirstName;
         [DisplayName("Imię")]
+        [ReadOnly(true)]
         public string FirstName
         {
             get { return _FirstName; }

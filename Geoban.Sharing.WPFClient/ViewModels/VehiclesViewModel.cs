@@ -10,6 +10,7 @@ using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Geoban.Sharing.WPFClient.ViewModels
@@ -76,7 +77,32 @@ namespace Geoban.Sharing.WPFClient.ViewModels
         }
 
 
-        #endregion  
+        #region ShowCommand
+
+        public ICommand ShowCommand
+        {
+            get
+            {
+                return new RelayCommand(p => Show(), p => CanShow());
+            }
+        }
+
+        public void Show()
+        {
+            // MessageBox.Show("Hello");
+
+            Views.VehicleView vehicleView = new Views.VehicleView(SelectedVehicle);
+            vehicleView.ShowDialog();
+        }
+
+        public bool CanShow()
+        {
+            return SelectedVehicle != null;
+        }
+
+        #endregion
+
+        #endregion
 
     }
 }

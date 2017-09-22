@@ -63,6 +63,12 @@
     <Compile Include="Binding\ListBindingView.xaml.cs">
       <DependentUpon>ListBindingView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ControlTemplates\ControlTemplateView.xaml.cs">
+      <DependentUpon>ControlTemplateView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlTemplates\NumPad.xaml.cs">
+      <DependentUpon>NumPad.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Converters\BrushConverter.cs" />
     <Compile Include="ItemsControl\ListBoxView.xaml.cs">
       <DependentUpon>ListBoxView.xaml</DependentUpon>
@@ -81,6 +87,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Binding\ListBindingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlTemplates\ControlTemplateView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlTemplates\NumPad.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

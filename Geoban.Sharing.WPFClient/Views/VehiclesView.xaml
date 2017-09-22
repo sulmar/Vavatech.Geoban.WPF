@@ -17,6 +17,7 @@
             <Button Command="{Binding CalculateCommand}" CommandParameter="Hello World">Calculate</Button>
             <Button Command="{Binding CalculateCommand}" >Calculate 2</Button>
             <Button Command="{Binding CalculateCommand}">Calculate 3</Button>
+            <Button Command="{Binding ShowCommand}">Show</Button>
         </StackPanel>
 
         
