@@ -39,12 +39,33 @@ namespace Geoban.Sharing.Models
         }
 
         [DisplayName("Imię i nazwisko")]
-        public string FullName => $"{FirstName} {LastName}";
+        public string FullName
+        {
+            get
+            {
+                return $"{FirstName} {LastName} z {HomeAddress.City}";
+            }
+        }
 
         [DisplayName("Wiek")]
         public byte Age { get; set; }
 
         public Address HomeAddress { get; set; }
 
+        public Customer()
+        {
+            HomeAddress = new Address();
+
+            HomeAddress.PropertyChanged += HomeAddress_PropertyChanged;
+
+        }
+
+        private void HomeAddress_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == "City")
+            {
+                OnPropertyChanged(nameof(FullName));
+            }
+        }
     }
 }
